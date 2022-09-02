@@ -2,16 +2,16 @@
   "manifest_version": 1,
   "type": "WebApp",
   "meta": {
-    "name": "Sample App",
-    "author": "Overwolf",
+    "name": "Strafin",
+    "author": "joseph-signed",
     "version": "3.0.3",
     "minimum-overwolf-version": "0.160.0",
-    "description": "An example app for developers new to Overwolf",
-    "dock_button_title": "Sample - TS",
+    "description": "Halo Helper",
+    "dock_button_title": "Strafin",
     "icon": "icons/IconMouseOver.png",
     "icon_gray": "icons/IconMouseNormal.png",
-    "launcher_icon": "icons/desktop-icon.ico",
-    "window_icon": "icons/IconMouseOver.png"
+    "launcher_icon": "icon/halo.png",
+    "window_icon": "icon/halo.png"
   },
   "permissions": [
     "Hotkeys",
@@ -53,12 +53,12 @@
         "transparent": true,
         "override_on_update": true,
         "size": {
-          "width": 1212,
-          "height": 699
+          "width": 900,
+          "height": 600
         },
         "min_size": {
-          "width": 1212,
-          "height": 699
+          "width": 900,
+          "height": 600
         }
       },
       "in_game": {
