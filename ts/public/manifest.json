@@ -49,7 +49,7 @@
         "file": "desktop.html",
         "desktop_only": true,
         "native_window": true,
-        "resizable": true,
+        "resizable": false,
         "transparent": true,
         "override_on_update": true,
         "size": {
@@ -59,7 +59,7 @@
         "min_size": {
           "width": 900,
           "height": 600
-        }
+        } 
       },
       "in_game": {
         "file": "in_game.html",
