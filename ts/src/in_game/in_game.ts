@@ -67,11 +67,7 @@ class InGame extends AppWindow {
         case 'kill':
         case 'death':
         case 'assist':
-        case 'level':
-        case 'matchStart':
-        case 'match_start':
-        case 'matchEnd':
-        case 'match_end':
+        case 'match_info':
           return true;
       }
 
