@@ -1,0 +1,1 @@
+Strafin is an OverWolf Halo Infinite add-on to help competitive players analyze their strafe stats.

@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\ts",
-    "\\ts\\src\\background",
-    "\\ts\\src\\desktop",
-    "\\ts\\src\\in_game"
+    "\\ts\\src"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\ts\\src\\GamePad.ts",
   "PreviewInSolutionExplorer": false
 }
