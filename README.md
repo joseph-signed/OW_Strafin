@@ -1,4 +1,4 @@
-# Overwolf sample app
+# OVERWOLF STRAFIN
 
 This repository contains sample apps that demonstrate some basic points and flows that are relevant when developing Overwolf apps:
 
