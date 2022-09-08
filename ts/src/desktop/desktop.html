@@ -1,64 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="../../css/general.css" />
-    <link rel="stylesheet" href="../../css/header.css" />
-    <link rel="stylesheet" href="../../css/desktop.css" />
-    <link rel="stylesheet" href="../../css/modal.css" />
-    <title>Strafin</title>
+    <meta charset="UTF-8">
+    <title>JavaScript Gamepad Demo</title>
+    <link rel="stylesheet" type="text/css" href="gpcon.css">
+    <script type="text/javascript" src="libhtml.js"></script>
+    <script type="text/javascript" src="libgp.js"></script>
+    <script type="text/javascript" src="gpcon.js"></script>
 </head>
 
-<body class="desktop">
-    <!-- -------------------------------- Header ------------------------------- -->
+<body>
+    <div id="sol" class="nodisp">Gamepads don't appear to be supported
+    on this browser.  Bummer.</div>
 
-    <header id="header" class="app-header">
-        <h1>Strafin</h1>
-        <div class="window-controls-group">
-            <button id="minimizeButton" class="window-control window-control-minimize" />
-            <button id="maximizeButton" class="window-control window-control-maximize" />
-            <button id="closeButton" class="window-control window-control-close" />
+    <div id="prompt" class="nodisp">Attach a gamepad or press a gamepad
+    button</div>
+
+    <div id="main" class="nodisp">
+        <div id="button-bar">
+            <span class="button-bar-title">Gamepad: </span>
+            <span id="button-bar-box"></span>
         </div>
-    </header>
 
-    <!-- --------------------------------- Main -------------------------------- -->
-    <main>
-        <div style="background-image: url('../../img/haloBackground.png'); height: 95vh;">
-            <div id="container">
-                <span>s</span>
+        <div id="mode-select-box">
+            Mode
+            <select id="mode-select">
+                <option selected="selected" value="raw">Raw</option>
+                <option value="clamp">Clamped</option>
+            </select>
+        </div>
+
+        <div id="deadzone-box">
+            Deadzone
+            <input type="checkbox" id="deadzone">
+        </div>
+
+        <hr>
+
+        <div id="gamepad-container">
+        </div>
+    </div>
+
+    <!-- Templates are copied for use when needed -->
+    <div id="templates">
+        <input id="template-button" type="button" class="selector-button">
+
+        <div id="template-gamepad" class="gamepad nodisp">
+            <div class="gamepad-title"></div>
+            (<div class="gamepad-mapping"></div>)
+            <div class="gamepad-id"></div>
+            <div class="gamepad-controls-center">
+                <div class="gamepad-controls">
+                    <div class="gamepad-buttons-box"></div>
+                    <div class="gamepad-axes-box"></div>
+                </div>
             </div>
         </div>
-        
-    </main>
 
-    <!-- Boostrap Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <div id="template-gamepad-button-container" class="gamepad-button-container">
+            <div class="gamepad-button"></div>
+            <div class="gamepad-button-label"></div>
+        </div>
 
-    <script>
-        // Standard Google Universal Analytics code
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            },
-                i[r].l = 1 * new Date(); a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-            // Note: https protocol here
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        <div id="template-gamepad-axis-pair-container" class="gamepad-axis-pair-container">
+            <div class="gamepad-axis-pair">
+                <div class="gamepad-circle nodisp"></div>
+                <div class="gamepad-axis-pip"></div>
+                <div class="gamepad-axis-crosshair">
+                    <div class="gamepad-axis-crosshair-v"></div>
+                    <div class="gamepad-axis-crosshair-h"></div>
+                </div>
+            </div>
+            <div class="gamepad-axis-pair-label"></div>
+            <div class="gamepad-axis-pair-value"></div>
+        </div>
+    </div>
 
-        ga('create', 'UA-144253676-3', 'auto');
-
-        // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
-        ga('set', 'checkProtocolTask', function () { });
-        ga('require', 'displayfeatures');
-        ga('send', 'pageview', '/desktop.html');
-    </script>
 </body>
-
 </html>
