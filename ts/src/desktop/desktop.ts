@@ -1,7 +1,6 @@
 import {
     OWGames,
     OWGamesEvents,
-    OWHotkeys
   } from "@overwolf/overwolf-api-ts";
   
 import { AppWindow } from "../AppWindow";
