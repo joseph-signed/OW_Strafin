@@ -16,7 +16,7 @@ class Desktop extends AppWindow {
         return this._instance;
     }
 
-    
+
     public async run() {
         //   const gameClassId = await this.getCurrentGameClassId();
 
@@ -36,4 +36,6 @@ class Desktop extends AppWindow {
     }
 }
 
-Desktop.instance().run();
+
+
+//sDesktop.instance().run();
