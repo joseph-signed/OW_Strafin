@@ -5,6 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <title>JavaScript Gamepad Demo</title>
+    <div class="window-controls-group">
+        <button id="minimizeButton" class="window-control window-control-minimize" />
+        <button id="maximizeButton" class="window-control window-control-maximize" />
+        <button id="closeButton" class="window-control window-control-close" />
+      </div>
+    <!--Gamepad Additions-->
     <style type="text/css">
         /* http://meyerweb.com/eric/tools/css/reset/ 
         v2.0 | 20110126
@@ -355,8 +361,8 @@
             };
 
         }());
-    </script>
-    <script type="text/javascript">
+
+
         /**
         * Helper library for gamepads
         */
@@ -460,8 +466,7 @@
 
         }());
 
-    </script>
-    <script type="text/javascript">
+
         /**
         * Main
         */
@@ -776,6 +781,7 @@
         }());
 
     </script>
+    <!--End Gamepad Additions-->
 </head>
 
 <body style="background-color: white">
@@ -809,8 +815,19 @@
         <div id="gamepad-container">
         </div>
     </div>
+    <div id="logs">
+        <div id="events" class="logColumn">
+          <h1>Game Events</h1>
+          <div id="eventsLog" class="dataText">
+          </div>
+        </div>
+        <div id="infoUpdates" class="logColumn">
+          <h1>Info Updates</h1>
+          <div id="infoLog" class="dataText"></div>
+        </div>
+      </div>
 
-    
+
     <!-- Templates are copied for use when needed -->
     <div id="templates">
         <input id="template-button" type="button" class="selector-button">
