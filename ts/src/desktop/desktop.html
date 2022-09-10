@@ -777,6 +777,83 @@
 
     </script>
     <!--End Gamepad Additions-->
+    <!--Logs Styles-->
+    <style>
+        #logs {
+            display: flex;
+            justify-content: space-between;
+            flex: 0 0 auto;
+            width: calc(100% - 210px);
+        }
+
+        .logColumn {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 50%;
+            padding-right: 30px;
+        }
+
+        .dataText {
+            background-color: #464646;
+            border-radius: 4px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            white-space: nowrap;
+            padding: 10px;
+            margin-top: 16px;
+            color: #8d8d8d;
+            height: calc(100vh - 165px);
+            max-width: inherit;
+            font-size: 13px;
+        }
+
+        .dataText pre {
+            white-space: pre-line;
+            word-break: break-word;
+            margin: 5px 0;
+        }
+
+        .dataText::-webkit-scrollbar {
+            width: 20px;
+        }
+
+        .dataText::-webkit-scrollbar-track {
+            background: #333333;
+            border-left: 9px solid #464646;
+            border-right: 9px solid #464646;
+            margin: 10px 0px;
+        }
+
+        .dataText::-webkit-scrollbar-thumb {
+            background: #8d8d8d;
+            border-left: 8px solid #464646;
+            border-right: 8px solid #464646;
+        }
+
+        .highlight {
+            color: #00defa;
+        }
+
+        button.logCopy {
+            background: #464646;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+            border-radius: 2px;
+            color: #d5d5d5;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 120%;
+            padding: 6px 8px;
+            margin-top: 10px;
+            cursor: pointer;
+            align-self: flex-start;
+        }
+
+        button.logCopy:hover {
+            background: #8d8d8d;
+            color: #ffffff;
+        }
+    </style>
 </head>
 
 <body style="background-color: white">
@@ -821,29 +898,18 @@
             <div id="gamepad-container">
             </div>
         </div>
-        
+
         <div id="logs">
             <div id="events" class="logColumn">
-              <h1>Game Events</h1>
-              <div id="eventsLog" class="dataText">
-              </div>
+                <h1>Game Events</h1>
+                <div id="eventsLog" class="dataText">
+                </div>
             </div>
             <div id="infoUpdates" class="logColumn">
-              <h1>Info Updates</h1>
-              <div id="infoLog" class="dataText"></div>
+                <h1>Info Updates</h1>
+                <div id="infoLog" class="dataText"></div>
             </div>
-          </div>
-          <div id="other">
-            <h1>Real-time Game Data</h1>
-            <p id="infoParagraph">
-              The background controller of this app is listening to all the game
-              events and info updates, and sends them to this window, that prints
-              them to the screen. Some specific events (Match Start/End, Kill and
-              Death) are painted in <span style="color: #00DEFA">teal</span> and
-              logged to the developers console.
-            </p>
-          </div>
-
+        </div>
 
         <!-- Templates are copied for use when needed -->
         <div id="templates">

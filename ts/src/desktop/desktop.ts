@@ -14,6 +14,9 @@ class Desktop extends AppWindow {
 
     private constructor() {
         super(kWindowNames.desktop);
+
+        this._eventsLog = document.getElementById('eventsLog');
+        this._infoLog = document.getElementById('infoLog');
     }
 
     public static instance() {
